@@ -4,6 +4,9 @@ import {Post} from './entities/post.entity'
 
 @Injectable()
 export class PostsService {
+
+    //FIRST OPERATION: CREATE POST
+
     //In-memory temporal storage while supabase isn't set
     private posts: Post[] = []; 
     //Auto-increment ID
