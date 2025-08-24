@@ -24,4 +24,16 @@ export class PostsService {
         return newPost;
     }
 
+    //SECOND OPERATION: READ POST
+    findAll(): Post[]{
+        return this.posts;
+    }
+    findOne(id: number): Post {
+        const post = this.posts.find(post => post.id === id);
+        if (!post) {
+            throw new Error(`Post with ID #${id}  not found`);
+        }
+        return post;
+    }
+
 }
